@@ -7,6 +7,7 @@
 1. Clone the Project
 2. mkdir build
 3. cd build
-4. cmake --build . --config Release
-5. cd Release
-6. Module_1_Tutorials.exe "path\to\the\image"
+4. cmake -G "Visual Studio 14 2015 Win64" ..
+5. cmake --build . --config Release
+6. cd Release
+7. Module_1_Tutorials.exe "path\to\the\image"
