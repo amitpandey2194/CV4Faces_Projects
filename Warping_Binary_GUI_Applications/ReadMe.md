@@ -17,4 +17,4 @@ Follow the Steps Given Below to Run the Code (Windows)
 
 After running the above command you can locate your .exe file with the name Module_1_Tutorials in the Release Folder
 
-5. run the command in CMD (Windows): Crop_Resize.exe "Path to the First Image" "Path to the Second Image"
+5. run the command in CMD (Windows): Module_1_Tutorials.exe "Path to the First Image" "Path to the Second Image"
