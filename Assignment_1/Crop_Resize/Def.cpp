@@ -72,7 +72,6 @@ void Crop_Resize::mainImageROI() {
 	int widthROI_MainImage = EndPoint.x - startPoint.x;
 	int height_CroppedImage = tempEndPoint.y - tempStartPoint.y;
 	int width_CroppedImage = tempEndPoint.x - tempStartPoint.x;
-	//scaling the cropped part of the First image according do the cropped selection in the new image
 	double scaleX = widthROI_MainImage / (width_CroppedImage*1.0);
 	double scaleY = heightROI_MainImage / (height_CroppedImage*1.0);
 	/*cout << "mainImage x:" << startPoint.x << "mainImage y:" << startPoint.y << endl;
@@ -89,7 +88,6 @@ void Crop_Resize::mainImageROI() {
 	resize(croppedImage, resizedCroppedImage, Size(), scaleX, scaleY, INTER_LINEAR);
 	imshow("resizedCroppedImage",resizedCroppedImage);
 	///////////////////////////////////////////////////////////
-	//finalOutput is a global Mat file////
 	resizedCroppedImage.copyTo(finalOutput(Range(startPoint.y, EndPoint.y), Range(startPoint.x, EndPoint.x)));
 	imshow("finalOutput", finalOutput);
 }
