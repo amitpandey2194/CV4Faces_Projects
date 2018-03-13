@@ -1,13 +1,20 @@
-##### For this Project You would need to following tools and libraries installed :
-1. Visual Studio 15 (built using VS compiler and CMake)
-2. Cmake 3.8.2
-3. OpenCV 3.2.0
+#####################################################
 
-##### To Build and Run the Code Follow given below steps:
-1. Clone the Project
-2. mkdir build
-3. cd build
-4. cmake -G "Visual Studio 14 2015 Win64" ..
-5. cmake --build . --config Release
-6. cd Release
-7. Module_1_Tutorials.exe "path\to\the\image"
+Requirements:
+1. Visual Studio 15;
+2. OpenCV 3.2.0
+3. cmake_minimum_required(VERSION 2.8.12)
+
+######################################################
+
+Follow the Steps Given Below to Run the Code (Windows)
+1. Download the Whole Folder and Change the path to the Folder in CMD.
+2. run the command in CMD (Windows): mkdir build
+3. run the command in CMD (Windows): cmake -G "Visual Studio 14 2015 Win64" ..
+4. run the command in CMD (Windows): cmake --build . --config Release
+
+#######################################################
+
+After running the above command you can locate your .exe file with the name Module_1_Tutorials in the Release Folder
+
+5. run the command in CMD (Windows): Crop_Resize.exe "Path to the First Image" "Path to the Second Image"
