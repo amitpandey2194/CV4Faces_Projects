@@ -11,6 +11,7 @@ int main(int argc,const char*argv[]){
 	commonObject.display(inputImage,"InputImage");//Displaying the Image
 	Module_1_Tutorials moduleObject(inputImage);
 	/*Functionality 1 Testing*/
+	
 	/*
 	const Mat & resizeImage = commonObject.resize_D_Image(inputImage, 0.6, 0.6,3);
 	commonObject.display(resizeImage,"resizedImage");//Displaying the Image
