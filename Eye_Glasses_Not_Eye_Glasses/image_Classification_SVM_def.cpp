@@ -165,7 +165,7 @@ void image_Classification_SVM::testingViaVideo()
         if (count % skip_frames == 0)
         {
             faceRects = faceDetector(dlibImageSmall);
-            cout << "Number of Faces detected:" << faceRects.size();
+            //cout << "Number of Faces detected:" << faceRects.size();
         }
         if(faceRects.size()>0)
         {
@@ -181,7 +181,7 @@ void image_Classification_SVM::testingViaVideo()
             
             dlib::full_object_detection landmarks = landMarkDetector(dlibImage, r);
             if (i == 0)
-            {    cout << "Number of landmarks detected:" << landmarks.num_parts() << endl;}
+            {    //cout << "Number of landmarks detected:" << landmarks.num_parts() << endl;}
             landmarksAll.push_back(landmarks);
         }
         cv::Mat croppedImage;
@@ -192,7 +192,7 @@ void image_Classification_SVM::testingViaVideo()
         computeHogFeatures(hogFeatureVectors, croppedImageVec);
         cv::Mat hogFeatureMatrix(hogFeatureVectors.size(), hogFeatureVectors[0].size(), CV_32FC1);
         convertVector2Matrix_4SVM(hogFeatureVectors, hogFeatureMatrix);
-        cout << "Size of the Feature Matrix" << cv::Size(hogFeatureMatrix.rows, hogFeatureMatrix.cols) << endl;
+        //cout << "Size of the Feature Matrix" << cv::Size(hogFeatureMatrix.rows, hogFeatureMatrix.cols) << endl;
         svmPredict(savedModel, pred, hogFeatureMatrix);
         if (pred.at<float>(0,0) == 1)
         {
@@ -215,4 +215,5 @@ void image_Classification_SVM::testingViaVideo()
             break;
         }
     }
+  }
 }

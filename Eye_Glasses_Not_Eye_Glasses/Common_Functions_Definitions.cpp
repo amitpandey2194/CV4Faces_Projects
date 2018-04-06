@@ -130,7 +130,7 @@ void CommonFunctions::getTheCroppedEyeImage(dlib::full_object_detection & landma
 	float bottomCornerPointX=landmarks.part(16).x();
 	float bottomCornerPointY=landmarks.part(29).y();
 
-	cout<<topCornerPointX<<" "<<topCornerPointY<<" "<<bottomCornerPointX<<" "<<bottomCornerPointY<<endl;
+	//cout<<topCornerPointX<<" "<<topCornerPointY<<" "<<bottomCornerPointX<<" "<<bottomCornerPointY<<endl;
 	//first specify the rows and then the column's range
 	crop_D_Image(inputImage,croppedImage,cv::Range(topCornerPointY,bottomCornerPointY),cv::Range(topCornerPointX,bottomCornerPointX));
 	resize(croppedImage,croppedImage,cv::Size(96,32),0,0,CV_INTER_CUBIC);
